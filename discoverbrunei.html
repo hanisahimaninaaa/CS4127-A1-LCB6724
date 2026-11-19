@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en" id="top">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discover Brunei</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="description" content="Discover Brunei Website">
+</head>
+
+<body>
+        <!--Navigation bar-->
+    <header>
+        <nav class="desktop-nav">
+            <ul class="navigation-bar">
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="discoverbrunei.html">DISCOVER BRUNEI</a></li>
+                <li><a href="events.html">EVENTS</a></li>
+                <li><a href="planyourvisit.html">PLAN YOUR VISIT</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+            </ul>
+        </nav>
+
+        <!--Side bar button-->
+        <button class="menu-toggle" id="menu-toggle" aria-label="Open navigation" aria-expanded="false">☰</button>
+        <nav class="sidebar" id="sidebar">
+            <button class="close-menu" id="close-menu" aria-label="Close navigation">&times;</button>
+            <ul class="navigation-bar">
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="discoverbrunei.html">DISCOVER BRUNEI</a></li>
+                <li><a href="events.html">EVENTS</a></li>
+                <li><a href="planyourvisit.html">PLAN YOUR VISIT</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+            </ul>
+        </nav>
+        
+        <div class="nav-overlay" id="nav-overlay"></div>
+    </header>
+
+    <main class="discover-brunei-content">
+    <!--Local delicacies-->
+        <section class="local-delicacies-section">
+
+        <div class="local-delicacies-heading">
+            <h2>Brunei's Delicacies</h2>
+            <p>Try out our local food!</p>
+        </div>
+
+        <div class="local-delicacies-container">
+            <article class="local-delicacies-card">
+                <img src="https://ilarge.lisimg.com/image/19181480/973full-ambuyat.jpg" alt="Ambuyat">
+                <div class="local-delicacies-details">
+                    <h3>Ambuyat</h3>
+                    <p>A traditional Brunei dish made from sago starch, usually enjoyed with dipping sauces.</p>
+                </div>
+            </article>
+
+            <article class="local-delicacies-card">
+                <img src="https://www.bruneitourism.com/wp-content/uploads/2024/08/food-kuih-penyaram-2048x1492.webp" alt="Kuih Penyaram">
+                <div class="local-delicacies-details">
+                    <h3>Kuih Penyaram</h3>
+                    <p>A traditional sweet fried snack with a soft centre and crispy edges, shaped like a UFO.</p>
+                </div>
+            </article>
+
+            <article class="local-delicacies-card">
+                <img src="https://substackcdn.com/image/fetch/$s_!p6o2!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F68134f13-35d7-4f9d-be55-3cf3c974d7d3_936x922.png" alt="Nasi Katok">
+                <div class="local-delicacies-details">
+                    <h3>Nasi Katok</h3>
+                    <p>A popular local favourite consisting of rice, fried chicken and spicy sambal.</p>
+                </div>
+            </article>
+        </div>
+    </section>
+
+        
+    <!--Attractions-->
+    <section class="attractions-page">
+    <div class="attractions-heading">
+        <h2>Explore Brunei's Attractions</h2>
+        <p>Visit Brunei's memorable landmarks and find out the meaning behind every location.</p>
+    </div>
+
+    <div class="attractions-container">
+        <article class="attraction-card" onclick="flipCard(this)">
+            <div class="attraction-inner">
+                <div class="attraction-front">
+                    <img src="https://media.timeout.com/images/105806919/1920/1440/image.jpg"
+                         alt="Ulu Temburong National Park">
+                    <div class="attraction-details">
+                        <h3>Ulu Temburong National Park</h3>
+                        <p>Brunei's beautiful district filled with rainforests where activities such as jungle trekking can be enjoyed.</p>
+                        <span>CLICK TO KNOW MORE</span>
+                    </div>
+                </div>
+                <div class="attraction-back">
+                    <h3>Ulu Temburong National Park</h3>
+                    <p>Known as the Green Jewel of Brunei, this national park offers visitors an opportunity to explore tropical rainforests, experience canopy walks and discover the country's natural biodiversity.</p>
+                </div>
+            </div>
+        </article>
+
+
+        <article class="attraction-card" onclick="flipCard(this)">
+            <div class="attraction-inner">
+                <div class="attraction-front">
+                    <img src="https://hirokiogawa.client.jp/BruneiRoyalChariot.jpg"
+                         alt="Royal Regalia Museum">
+                    <div class="attraction-details">
+                        <h3>Royal Regalia Museum</h3>
+                        <p>A collection of Brunei's royal heritage, packed with fruitful history.</p>
+                        <span>CLICK TO KNOW MORE</span>
+                    </div>
+                </div>
+                <div class="attraction-back">
+                    <h3>Royal Regalia Museum</h3>
+                    <p>Explore Brunei's royal history through displays of royal ceremonial objects, gifts and the Sultan's coronation collection. It provides visitors with an insight into the country's monarchy and heritage.</p>
+                </div>
+            </div>
+        </article>
+
+
+        <article class="attraction-card" onclick="flipCard(this)">
+            <div class="attraction-inner">
+                <div class="attraction-front">
+                    <img src="https://worldfun.uk/images/country-river-kampong-ayer-water-village-worldfun-v1.jpg"
+                         alt="Kampong Ayer">
+                    <div class="attraction-details">
+                        <h3>Kampong Ayer</h3>
+                        <p>The world's largest traditional stilt village.</p>
+                        <span>CLICK TO KNOW MORE</span>
+                    </div>
+                </div>
+                <div class="attraction-back">
+                    <h3>Kampong Ayer</h3>
+                    <p>Often described as the Venice of the East, Kampong Ayer is a historic water village featuring traditional houses built on stilts. 
+                        Visitors can explore the village using water taxis.</p>
+                </div>
+            </div>
+        </article>
+
+
+        <article class="attraction-card" onclick="flipCard(this)">
+            <div class="attraction-inner">
+                <div class="attraction-front">
+                    <img src="https://images6.alphacoders.com/533/thumb-1920-533602.jpg"
+                         alt="Sultan Omar Ali Saifuddien Mosque">
+                    <div class="attraction-details">
+                        <h3>Sultan Omar Ali Saifuddien Mosque</h3>
+                        <p>One of Brunei's most iconic architectural landmarks, featuring a magnificent golden dome.</p>
+                        <span>CLICK TO KNOW MORE</span>
+                    </div>
+                </div>
+                <div class="attraction-back">
+                    <h3>Sultan Omar Ali Saifuddien Mosque</h3>
+                    <p>One of Brunei's most recognisable landmarks, this magnificent mosque features a golden dome, Italian marble and a beautiful lagoon. 
+                        It represents the country's Islamic heritage and architectural beauty.</p>
+                </div>
+            </div>
+        </article>
+
+
+        <article class="attraction-card" onclick="flipCard(this)">
+            <div class="attraction-inner">
+                <div class="attraction-front">
+                    <img src="https://images.squarespace-cdn.com/content/v1/5e72c8bfe21ad940ba788673/1621106999825-WKR1PV840NL80AV727C2/jerudong-park.jpg"
+                         alt="Jerudong Park">
+                    <div class="attraction-details">
+                        <h3>Jerudong Park</h3>
+                        <p>A variety of joyful rides awaits at Brunei's popular amusement park.</p>
+                        <span>CLICK TO KNOW MORE</span>
+                    </div>
+                </div>
+                <div class="attraction-back">
+                    <h3>Jerudong Park</h3>
+                    <p>Jerudong Park is a popular recreational destination in Brunei, offering amusement rides and entertainment for families, 
+                        friends and visitors of different ages.</p>
+                </div>
+            </div>
+        </article>
+    </div>
+    </section>
+
+
+    <!--Culture/local customs-->
+    <section class="culture">
+        <div class="culture-heading">
+            <h2>Brunei's Culture and Local Customs</h2>
+            <p>Experience Brunei's rich traditions and learn about the local customs to respect during your visit.</p>
+        </div>
+
+        <div class="culture-container">
+            <article class="culture-card">
+                <h3>01 Modest and appropriate clothing</h3>
+                <p>Visitors are encouraged to dress modestly, especially when visiting mosques and religious places. Shoulders and knees should be covered.</p>
+            </article>
+
+            <article class="culture-card">
+                <h3>02 Religious customs</h3>
+                <p>On Fridays, Brunei closed down shops and restaurants for a certain period of time for respect to those who pray at the mosque.</p>
+            </article>
+
+            <article class="culture-card">
+                <h3>03 Dining customs</h3>
+                <p>Ramadhan is respected with no dining in restaurants during the day and gather together for feast during sundown.</p>
+            </article>
+        </div>
+    </section>
+    </main>
+
+    <!--Footer-->
+    <footer>
+	    <div>
+		    <p>&copy; <span id="year">2026</span>	All rights reserved.</p>
+		    <p class="back-to-top"><a href="#top">Back to top</a></p>
+	    </div>
+    </footer>   
+
+    <script src="script.js"></script>
+</body>
+</html>

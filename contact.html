@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en" id="top">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discover Brunei</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="description" content="Discover Brunei Website">
+</head>
+
+<body>
+    <!--Navigation bar-->
+    <header>
+        <nav class="desktop-nav">
+            <ul class="navigation-bar">
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="discoverbrunei.html">DISCOVER BRUNEI</a></li>
+                <li><a href="events.html">EVENTS</a></li>
+                <li><a href="planyourvisit.html">PLAN YOUR VISIT</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+            </ul>
+        </nav>
+
+        <!--Side bar button-->
+        <button class="menu-toggle" id="menu-toggle" aria-label="Open navigation" aria-expanded="false">☰</button>
+        <nav class="sidebar" id="sidebar">
+            <button class="close-menu" id="close-menu" aria-label="Close navigation">&times;</button>
+            <ul class="navigation-bar">
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="discoverbrunei.html">DISCOVER BRUNEI</a></li>
+                <li><a href="events.html">EVENTS</a></li>
+                <li><a href="planyourvisit.html">PLAN YOUR VISIT</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+            </ul>
+        </nav>
+        
+        <div class="nav-overlay" id="nav-overlay"></div>
+    </header>
+    
+	<!--Title and contact form-->
+    <main>
+		<section class="contact-content">
+			<div class="contact-container">
+        		<h2 class="contact-title">Any inquiries?</h2>
+				<p class="contact-description">Please let us know if you have any enquiries about Brunei Darussalam.
+					We are happy to help you!
+				</p>
+
+			<form class="contact-form" id="contactForm">
+				<!--Name-->
+				<label for="fn">Full name</label><br>
+				<input type="text" id="fn" name="fn" placeholder=" First Name">
+				<span class="error" id="fnError"></span>
+				<input type="text" id="ln" name="ln" placeholder=" Last Name">
+				<span class="error" id="lnError"></span>
+           	 	<br><br>
+
+				<!--Email-->
+				<label for="email" style="font-size: 20px;">Email</label><br>
+				<input type="email" id="email" name="email" placeholder=" e.g. oogabooga@hotmail.com" required>
+				<span class="error" id="emailError"></span>
+				<br><br>
+
+				<!--Topic-->
+				<label for ="topic">Topic</label><br>
+				<input type="text" id="topic" placeholder="Type down topic">
+				<span class="error" id="topicError"></span>
+				<br><br>
+				
+				<!--Message (Text area)-->
+				<label for="comments">Message</label><br>
+				<textarea id="comments" name="comments" rows="10" cols="40"></textarea>
+				<span class="error" id="commentsError"></span>
+				<br>
+				
+				<!--Submit and Reset button-->
+				<input class="submit-reset" type="submit" value="SUBMIT">
+				<input class="submit-reset" type="reset" value="RESET">
+
+				<p id="successMessage"></p>
+			</form>
+			</div>
+		</section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Discover Brunei. All rights reserved.</p>
+        <p><a href="#top">Back to top</a></p>
+    </footer>
+
+	<script src="script.js"></script>
+</body>
+</html>

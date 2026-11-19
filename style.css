@@ -1,0 +1,834 @@
+* {
+    box-sizing: border-box;
+    font-family: bahnschrift;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(90deg,#1E3B2Ff0 0%,#1E3B2Fa8 50%,#1E3B2F40 100%);
+    background-attachment: fixed;
+    color: #F5F0E6;
+    font-family: bahnschrift;
+    line-height: 1.7;
+}
+
+/*Header and navigation bar*/
+header {
+    height: 90px;
+    padding: 0 7%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background:#F5F0E6;
+}
+.navigation-bar{
+	list-style-type: none;
+	display: flex;
+	overflow: hidden;
+	gap: .5rem;
+	margin: 0;
+	padding: 10px;
+	justify-content: center;
+}
+li a{
+	display: block;
+	color: #F5F0E6;
+    font-family: bahnschrift;
+	text-align: center;
+	padding: 7px 15px;
+	text-decoration: none;
+	box-shadow: 5px 5px #1E3B2F;
+	background-color: #728E6D;
+	border-radius: 5px;
+	margin-right: 10px;
+}
+li a:hover{
+	transition: 0.5s;
+	transform: translate(0.05em, 0.05em);
+	box-shadow: 0 0 0 0;
+}
+
+/*Side bar*/
+.menu-toggle {
+    position: absolute;
+    right: 7%;
+    background-color: #728E6D;
+    color: #F5F0E6;
+    border: none;
+    border-radius: 5px;
+    padding: 7px 14px;
+    font-size: 25px;
+    cursor: pointer;
+    box-shadow: 5px 5px #1E3B2F;
+    transition: 0.3s;
+}
+.menu-toggle:hover {
+    transform: translate(2px, 2px);
+    box-shadow: none;
+}
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: auto;
+    width: 300px;
+    max-width: 85%;
+    height: 100vh;
+    background-color: #F5F0E6;
+    padding: 80px 25px 25px;
+    transform: translateX(100%);
+    transition: transform 0.4s ease;
+    z-index: 1002;
+}
+.sidebar.active {
+    transform: translateX(0);
+}
+.sidebar .navigation-bar {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.sidebar .navigation-bar li a {
+    display: block;
+    background-color: #728E6D;
+    color: #F5F0E6;
+    font-family: Bahnschrift;
+    text-align: center;
+    text-decoration: none;
+    padding: 12px 15px;
+    margin: 0;
+    border-radius: 5px;
+    box-shadow: 5px 5px #1E3B2F;
+    transition: 0.3s;
+}
+.sidebar .navigation-bar li a:hover {
+    transform: translate(2px, 2px);
+    box-shadow: 5px 5px #1E3B2F;
+}
+.close-menu {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    background: none;
+    border: none;
+    color: #1E3B2F;
+    font-size: 35px;
+    cursor: pointer;
+}
+.nav-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.4s;
+    z-index: 1001;
+}
+.nav-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+.menu-toggle.hidden {
+    display: none;
+}
+body.menu-open {
+    overflow: hidden;
+}
+
+
+/*INDEX.HTML*/
+/*Main content*/
+main {
+    width: 100%;
+}
+.main-content {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 10%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.main-content-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg,#1E3B2Ff0 0%,#1E3B2Fa8 50%,#1E3B2F40 100%);
+}
+
+/*Main title and description*/
+.main-content-title {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-width: 750px;
+    text-align: left;
+}
+.main-content-title h1 {
+    margin: 0 0 25px;
+    font-size: 70px;
+    font-weight: bold;
+    color: #C8B48A;
+}
+.main-content-description {
+    max-width: 600px;
+    width: 100%;
+    margin: 0;
+}
+.main-content-description p {
+    margin: 0 0 16px;
+    font-family: bahnschrift;
+    font-size: 18px;
+    line-height: 1.8;
+    color: #F5F0E6;
+}
+
+/*Discover Brunei button*/
+.discover-button {
+    display: inline-block;
+	text-align: center;
+	text-decoration: none;
+	box-shadow: 5px 5px #1E3B2F;
+	background-color: #C8B48A;
+	border-radius: 5px;
+	margin-top: 10px;
+    padding: 10px 16px;
+    transition: 0.3s;
+}
+.discover-button a {
+    font-family: bahnschrift;
+    font-size: 14px;
+    font-weight: bold;
+    color: #1E3B2F;
+    text-decoration: none;
+}
+.discover-button:hover {
+    transition: 0.5s;
+	transform: translate(0.05em, 0.05em);
+	box-shadow: 0 0 0 0;
+}
+
+/*DISCOVERBRUNEI.HTML*/
+.discover-brunei-content {
+    width: 100%;
+    padding: 40px 8% 50px;
+}
+
+/*Local delicacies section*/
+/*Local delicacies tiitle and description*/
+.local-delicacies-heading {
+    display: block;
+    font-family: bahnschrift;
+    width: 100%;
+    text-align: center;
+    color: #C8B48A;
+    margin: 0 auto 35px;
+}
+
+.local-delicacies-heading h2 {
+    color: #C8B48A;
+    font-size: 35px;
+    margin: 0 0 5px;
+}
+
+.local-delicacies-heading p {
+    color: #F5F0E6;
+    font-size: 16px;
+    margin: 0 auto;
+    max-width: 600px;
+}
+
+/*Local delicacies cards, 3 cards*/
+.local-delicacies-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    max-width: 1200px;
+    margin: 0 auto 50px;
+}
+.local-delicacies-card {
+    background-color: #EAE5D9;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 5px 5px #1E3B2F;
+    transition: 0.3s;
+}
+.local-delicacies-card:hover {
+    transform: translateY(-5px);
+}
+.local-delicacies-card img {
+    display: block;
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+}
+
+/*Local delicacies card details*/
+.local-delicacies-details {
+    padding: 18px;
+    color: #1E3B2F;
+}
+.local-delicacies-card h3 {
+    color: #1E3B2F;
+    font-size: 20px;
+    margin: 8px 0;
+}
+.local-delicacies-details p {
+    color: #1E3B2F;
+    font-size: 14px;
+}
+
+
+
+/*Attractions section*/
+.attractions-heading {
+    text-align: center;
+    color: #C8B48A;
+    margin-bottom: 35px;
+}
+.attractions-heading h2 {
+    font-size: 35px;
+    margin-bottom: 5px;
+}
+.attractions-heading p {
+    color: #F5F0E6;
+    font-size: 16px;
+    margin: 0 auto;
+    max-width: 600px;
+}
+
+/*Attractions cards, 5 cards*/
+.attractions-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    max-width: 1200px;
+    margin: 0 auto 50px;
+}
+.attraction-card {
+    height: 400px;
+    perspective: 1000px;
+    cursor: pointer;
+    border-radius: 10px;
+}
+.attraction-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+.attraction-card.flipped .attraction-inner {
+    transform: rotateY(180deg);
+}
+.attraction-front,
+.attraction-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    background-color: #EAE5D9;
+    box-shadow: 5px 5px #1E3B2F;
+}
+.attraction-front {
+    color: #1E3B2F;
+}
+.attraction-front img {
+    display: block;
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+}
+.attraction-details {
+    padding: 18px;
+    color: #1E3B2F;
+    text-align: center;
+}
+.attraction-details h3 {
+    color: #1E3B2F;
+    font-size: 20px;
+    margin: 8px 0;
+}
+.attraction-details p {
+    color: #1E3B2F;
+    font-size: 14px;
+    line-height: 1.6;
+}
+.attraction-back {
+    transform: rotateY(180deg);
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #1E3B2F;
+}
+.attraction-back h3 {
+    color: #1E3B2F;
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+.attraction-back p {
+    color: #1E3B2F;
+    font-size: 15px;
+    line-height: 1.8;
+}
+.attraction-card:hover {
+    transform: translateY(-5px);
+    transition: 0.3s;
+}
+
+
+/*Culture and local customs section*/
+.culture {
+    width: 100%;
+    padding: 70px 8%;
+    min-height: 700px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #1E3B2F;
+}
+
+/*Culture title and description*/
+.culture-heading {
+    text-align: center;
+    color: #C8B48A;
+    margin-bottom: 35px;
+}
+.culture-heading h2 {
+    font-size: 35px;
+    margin-bottom: 5px;
+}
+.culture p {
+    font-size: 16px;
+    color: #EAE5D9;
+    line-height: 1.8;
+}
+
+/*Culture cards, 3 cards*/
+.culture-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 22px 15px;
+    border-top: 1px solid #EAE5D9;
+}
+.culture h3 {
+    font-size: 30px;
+    color: #C8B48A;
+    margin-bottom: 15px;
+}
+.culture-card p {
+    font-size: 16px;
+    line-height: 1.7;
+    color: #F5F0E6;
+    margin: 0;
+}
+
+
+/*EVENTS.HTML*/
+/*Events title and description*/
+.events-page {
+    width: 100%;
+    padding: 40px 8%;
+    background: linear-gradient(90deg, #1E3B2Ff0 0%, #1E3B2Fa8 50%, #1E3B2F40 100%);
+}
+.events-heading {
+    text-align: center;
+    color: #C8B48A;
+    margin-bottom: 35px;
+}
+.events-heading h2 {
+    font-size: 35px;
+    margin-bottom: 5px;
+}
+.events-heading p {
+    color: #F5F0E6;
+    font-size: 16px;
+    margin: 0 auto;
+    max-width: 600px;
+}
+
+/*Events cards, 3 cards*/
+.events-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    max-width: 1200px;
+    margin: auto;
+}
+.event-card {
+    background-color: #EAE5D9;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 5px 5px #1E3B2F;
+    transition: 0.3s;
+}
+.event-card:hover {
+    transform: translateY(-5px);
+}
+.event-card img {
+    display: block;
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+}
+.event-details {
+    padding: 18px;
+    color: #1E3B2F;
+}
+.event-date {
+    color: #7F8C6A;
+    font-size: 13px;
+    margin-bottom: 8px;
+}
+.event-card h3 {
+    color: #1E3B2F;
+    font-size: 20px;
+    margin: 8px 0;
+}
+.event-details p {
+    color: #1E3B2F;
+    font-size: 14px;
+}
+
+/*PLANYOURVISIT.HTML*/
+/*Plan your visit contentn*/
+.planyourvisit {
+    width: 84%;
+    min-height: 700px;
+    margin: 50px auto;
+    padding: 70px 10%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #1E3B2F;
+}
+
+/*Plan your visit title and description*/
+.planyourvisit-heading {
+    text-align: center;
+    color: #C8B48A;
+    margin-bottom: 35px;
+}
+.planyourvisit-heading h2 {
+    font-size: 35px;
+    margin-bottom: 5px;
+}
+.planyourvisit p {
+    font-size: 16px;
+    color: #EAE5D9;
+    line-height: 1.8;
+}
+
+/*Plan your visit cards, 3 cards*/
+.planyourvisit-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 22px 15px;
+    border-top: 1px solid #EAE5D9;
+}
+.planyourvisit h3 {
+    font-size: 30px;
+    color: #C8B48A;
+    margin-bottom: 15px;
+}
+.planyourvisit-card p {
+    font-size: 16px;
+    line-height: 1.7;
+    color: #F5F0E6;
+    margin: 0;
+}
+
+/*Plan your visit button*/
+.planyourvisit-button {
+    display: block;
+    width: fit-content;
+    text-align: center;
+    text-decoration: none;
+    box-shadow: 5px 5px #7F8C6A;
+    background-color: #C8B48A;
+    border-radius: 5px;
+    margin: 10px auto;
+    padding: 10px 16px;
+    transition: 0.3s;
+}
+.planyourvisit-button a {
+    font-family: bahnschrift;
+    font-size: 14px;
+    font-weight: bold;
+    color: #1E3B2F;
+    text-decoration: none;
+}
+.planyourvisit-button:hover {
+    transition: 0.5s;
+	transform: translate(0.05em, 0.05em);
+	box-shadow: 0 0 0 0;
+}
+
+
+/*CONTACT.HTML*/
+/*Contact title and description*/
+.contact-title {
+    position: relative;
+    text-align: center;
+    color: #C8B48A;
+    font-size: 40px;
+    margin: 0 0 15px;
+}
+.contact-content {
+    position: relative;
+    min-height: 750px;
+    padding: 60px 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(90deg, #1E3B2Ff0 0%, #1E3B2Fa8 50%, #1E3B2F40 100%);
+}
+.contact-description {
+    display: block;
+    font-size: 16px;
+    width: 100%;
+    max-width: 550px;
+    margin: 0 auto 15px;
+    text-align: center;
+    color: #F5F0E6;
+}
+
+/*Contact form*/
+.contact-form {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 10px;
+    text-align: center;
+}
+.contact-form label {
+    display: block;
+    font-size: 16px;
+    font-weight: bold;
+    color: #C8B48A;
+    margin-bottom: 5px;
+    text-align: left;
+}
+
+/*Contact form input*/
+.contact-form input[type="text"],
+.contact-form input[type="email"] {
+    width: 100%;
+    height: 40px;
+    margin-bottom: 18px;
+    padding: 10px;
+    border: 1px solid #7F8C6A;
+    border-radius: 5px;
+    font-size: 14px;
+}
+.contact-form textarea {
+    width: 100%;
+    min-height: 150px;
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #7F8C6A;
+    border-radius: 5px;
+    resize: vertical;
+    font-size: 14px;
+}
+
+/*Submit reset buttons*/
+.submit-reset {
+    margin-top: 10px;
+    margin-right: 8px;
+    padding: 7px 18px;
+    background-color: #C8B48A;
+    color: #1E3B2F;
+    border: none;
+    border-radius: 5px;
+    font-family: bahnschrift;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 5px 5px #1E3B2F;
+    transition: 0.3s;
+}
+.submit-reset:hover {
+    transform: translate(0.05em, 0.05em);
+    box-shadow: 0 0 0 0;
+}
+/*Javascript error message*/
+.error {
+    color: #ff6b6b;
+    font-size: 14px;
+    display: block;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+#successMessage {
+    color: #F5F0E6;
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+/*Footer*/
+footer {
+    width: 100%;
+    min-height: 75px;
+    padding: 15px 7%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: #1E3B2F;
+    color: #F5F0E6;
+    margin: 0;
+}
+footer p {
+    margin: 5px 0;
+    text-align: center;
+    font-family: Arial;
+    font-size: 14px;
+}
+footer a {
+    font-family: Arial;
+    font-size: 14px;
+    color: #C8B48A;
+    text-decoration: none;
+}
+footer a:hover {
+    color: #728E6D;
+}
+
+
+/*MOBILE RESPONSIVE*/
+@media (max-width: 650px) {
+    header {
+        height: auto;
+        min-height: 75px;
+        padding: 15px 5%;
+    }
+    .navigation-bar {
+        flex-wrap: wrap;
+        gap: 8px;
+        padding: 5px;
+    }
+    li a {
+        padding: 7px 10px;
+        margin-right: 0;
+        font-size: 12px;
+    }
+    .main-content {
+        padding: 50px 7%;
+    }
+    .main-content-title h1 {
+        font-size: 38px;
+    }
+    .main-content-description p {
+        font-size: 14px;
+    }
+    .discover-button {
+        padding: 10px 14px;
+    }
+    .local-delicacies-container,
+    .attractions-container,
+    .events-container {
+        grid-template-columns: 1fr;
+    }
+    .local-delicacies-card img,
+    .attraction-card img,
+    .event-card img {
+        height: 220px;
+    }
+    .discover-brunei-content,
+    .events-page {
+        padding: 30px 5%;
+    }
+    .culture {
+        width: 100%;
+        min-height: auto;
+        padding: 50px 6%;
+    }
+    .culture-heading h2 {
+        font-size: 28px;
+    }
+    .culture h3 {
+        font-size: 24px;
+    }
+    .culture-card {
+        padding: 18px 10px;
+    }
+    .planyourvisit {
+        width: 90%;
+        min-height: auto;
+        padding: 50px 6%;
+    }
+    .planyourvisit-heading h2 {
+        font-size: 28px;
+    }
+    .planyourvisit h3 {
+        font-size: 24px;
+    }
+    .planyourvisit-card {
+        padding: 18px 10px;
+    }
+    .contact-content {
+        min-height: auto;
+        padding: 40px 5%;
+    }
+    .contact-title {
+        font-size: 30px;
+    }
+    .contact-form {
+        padding: 10px;
+    }
+    footer {
+        padding: 18px 5%;
+    }
+    footer p,
+    footer a {
+        font-size: 12px;
+    }
+}
+@media screen and (max-width: 480px) {
+    header {
+        height: 70px;
+        padding: 0 5%;
+    }
+    .sidebar {
+        width: 260px;
+        max-width: 85%;
+        padding: 75px 20px 20px;
+    }
+    .sidebar .navigation-bar {
+        gap: 15px;
+    }
+    .sidebar .navigation-bar li a {
+        padding: 11px 12px;
+        font-size: 14px;
+    }
+    .menu-toggle {
+        font-size: 23px;
+    }
+}
+@media screen and (max-width: 768px) {
+    .desktop-nav {
+        display: none;
+    }
+}
